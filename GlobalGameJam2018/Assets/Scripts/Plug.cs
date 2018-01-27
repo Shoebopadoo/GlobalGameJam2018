@@ -3,28 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Plug : MonoBehaviour {
-    
-    private Jack _jack;
+
+    // Jack references
+    private Jack _pluggedJack;
+    private Jack _targetJack;
 
     #region Access Variables
-    public bool IsFree { get { return _jack == null; } }
-    public Jack GetJack { get { return _jack; } }
+    public bool IsFree { get { return _pluggedJack == null; } }
+    public bool IsTargetPlugged { get { return _pluggedJack == _targetJack; } }
+    public Jack PluggedJack { get { return _pluggedJack; } }
+    public Jack Target { get { return _targetJack; } }
+    
     #endregion
 
     // Use this for initialization
     void Start () {
-        _jack = null;
+        _pluggedJack = null;
 	}
 	
 	public void PlugIn(Jack target)
     {
         if(IsFree)
         {
-            _jack = target;
+            _pluggedJack = target;
+            _pluggedJack.PlugIn(this);
         }
     }
     public void Unplug()
     {
-        _jack = null;
+        if(_pluggedJack != null)
+        {
+            _pluggedJack.Unplug();
+            _pluggedJack = null;
+        }
+        
     }
+
+    public void TargetJack(Jack target)
+    {
+        _targetJack = target;
+        _targetJack.Target();
+    }
+
+
 }
