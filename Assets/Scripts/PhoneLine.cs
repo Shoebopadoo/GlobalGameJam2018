@@ -4,17 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PhoneLine : MonoBehaviour {
-
+    [SerializeField]
     private int _lineNum;
+    [SerializeField]
     private Switchboard _board;
+    [SerializeField]
     private Plug _outgoing;
+    [SerializeField]
     private Plug _incoming;
-    private PhoneState _state;
+    [SerializeField]
     private float _callLength = 10f;  // 10 second calls to start with
-
+    
+    [HideInInspector]
     public float startTime;
+    [HideInInspector]
     public float endTime;
 
+    private PhoneState _state;
     #region Access Variables
     public Plug Outgoing { get { return _outgoing; } }
     public Plug Incoming { get { return _incoming; } }

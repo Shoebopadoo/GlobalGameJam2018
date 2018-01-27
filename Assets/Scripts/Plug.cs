@@ -23,20 +23,11 @@ public class Plug : MonoBehaviour {
 	
 	public void PlugIn(Jack target)
     {
-        if(IsFree)
-        {
-            _pluggedJack = target;
-            _pluggedJack.PlugIn(this);
-        }
+        _pluggedJack = target;
     }
     public void Unplug()
     {
-        if(_pluggedJack != null)
-        {
-            _pluggedJack.Unplug();
-            _pluggedJack = null;
-        }
-        
+        _pluggedJack = null;
     }
 
     public void Target(Jack target)
