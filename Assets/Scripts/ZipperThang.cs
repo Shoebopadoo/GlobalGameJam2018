@@ -19,6 +19,7 @@ public class ZipperThang : MonoBehaviour {
 		if(transform.position != goal && grabbed == false)
         {
             transform.position = Vector3.Lerp(gameObject.transform.position, goal, speed / 100);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), speed / 100);
         }
 	}
 }
