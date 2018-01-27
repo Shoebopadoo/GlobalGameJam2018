@@ -19,13 +19,15 @@ public class Switchboard : MonoBehaviour {
 
 
     #region Unity Callbacks
-    private void Start()
+    private void Awake()
     {
         _jacks = new List<Jack>();
         _freeJacks = new Dictionary<int, Jack>();
         _fullJacks = new Dictionary<int, Jack>();
         _targetedJacks = new Dictionary<int, Jack>();
-
+    }
+    private void Start()
+    {
         foreach(Jack j in _jacks)
         {
             if(!_freeJacks.ContainsKey(j.Id))
