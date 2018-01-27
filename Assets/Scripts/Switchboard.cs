@@ -28,7 +28,8 @@ public class Switchboard : MonoBehaviour {
 
         foreach(Jack j in _jacks)
         {
-            _freeJacks.Add(j.Id, j);
+            if(!_freeJacks.ContainsKey(j.Id))
+                _freeJacks.Add(j.Id, j);
         }
     }
     #endregion
@@ -88,7 +89,7 @@ public class Switchboard : MonoBehaviour {
     /// <summary>
     /// Return a random available jack
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Jack found or null if no free jack</returns>
     public Jack FindFreeJack()
     {
         if(_freeJacks.Count > 0)
@@ -126,5 +127,25 @@ public class Switchboard : MonoBehaviour {
             FreeJack(target);
         else
             FillJack(target);
+    }
+
+    // Register a jack with the switchboard
+    public void RegisterJack(Jack jack)
+    {
+        // Add to master list
+        if(!_jacks.Contains(jack))
+        {
+            _jacks.Add(jack);
+        }
+
+        // Add to list of free jacks
+        if(!_freeJacks.ContainsKey(jack.Id))
+        {
+            _freeJacks.Add(jack.Id, jack);
+        }
+        else
+        {
+            Debug.LogError("Jack already tagged as free");
+        }
     }
 }
