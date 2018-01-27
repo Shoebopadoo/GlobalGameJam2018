@@ -52,6 +52,7 @@ public class Jack : MonoBehaviour {
             _plug = plug;
             _plug.PlugIn(this);
             _board.FillJack(this);
+            Debug.Log("Plugged " + _plug + " into " + gameObject.name);
             return true;
         }
         else
@@ -64,7 +65,7 @@ public class Jack : MonoBehaviour {
         _plug = null;
         tPlug.Unplug();
         _board.FreeJack(this);
-        Debug.Log("Unplugged " + tPlug + " from jack " + Id);
+        Debug.Log("Unplugged " + tPlug + " from " + gameObject.name);
         return tPlug;
     }
 

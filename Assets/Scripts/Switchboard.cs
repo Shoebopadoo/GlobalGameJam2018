@@ -143,5 +143,9 @@ public class Switchboard : MonoBehaviour {
         {
             _freeJacks.Add(jack.Id, jack);
         }
+        else
+        {
+            Debug.LogError("Jack already tagged as free");
+        }
     }
 }
