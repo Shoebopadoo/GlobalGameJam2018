@@ -3,14 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Plug : MonoBehaviour {
+    
+    private Jack _jack;
 
-	// Use this for initialization
-	void Start () {
-		
+    #region Access Variables
+    public bool IsFree { get { return _jack == null; } }
+    public Jack GetJack { get { return _jack; } }
+    #endregion
+
+    // Use this for initialization
+    void Start () {
+        _jack = null;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void PlugIn(Jack target)
+    {
+        if(IsFree)
+        {
+            _jack = target;
+        }
+    }
+    public void Unplug()
+    {
+        _jack = null;
+    }
 }
