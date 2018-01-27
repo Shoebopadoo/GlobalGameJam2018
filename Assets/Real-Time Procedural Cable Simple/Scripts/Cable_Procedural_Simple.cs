@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//public bool freezerot;
-
 [RequireComponent(typeof(LineRenderer))]
 [ExecuteInEditMode]
 public class Cable_Procedural_Simple : MonoBehaviour {
