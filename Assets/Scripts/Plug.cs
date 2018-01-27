@@ -12,7 +12,7 @@ public class Plug : MonoBehaviour {
     public bool IsFree { get { return _pluggedJack == null; } }
     public bool IsTargetPlugged { get { return _pluggedJack == _targetJack; } }
     public Jack PluggedJack { get { return _pluggedJack; } }
-    public Jack Target { get { return _targetJack; } }
+    public Jack TargetedJack { get { return _targetJack; } }
     
     #endregion
 
@@ -39,10 +39,14 @@ public class Plug : MonoBehaviour {
         
     }
 
-    public void TargetJack(Jack target)
+    public void Target(Jack target)
     {
         _targetJack = target;
         _targetJack.Target();
+    }
+    public void ClearTarget()
+    {
+        _targetJack = null;
     }
 
 
