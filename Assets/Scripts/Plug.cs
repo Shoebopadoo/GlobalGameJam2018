@@ -24,6 +24,10 @@ public class Plug : MonoBehaviour {
 	public void PlugIn(Jack target)
     {
         _pluggedJack = target;
+        if(IsTargetPlugged)
+        {
+            ClearTarget();
+        }
     }
     public void Unplug()
     {

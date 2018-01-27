@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//public bool freezerot;
-
 [RequireComponent(typeof(LineRenderer))]
 [ExecuteInEditMode]
 public class Cable_Procedural_Simple : MonoBehaviour {
@@ -70,14 +68,9 @@ public class Cable_Procedural_Simple : MonoBehaviour {
 		{
 			//Get direction Vector.
 			vectorFromStartToEnd = endPointTransform.position - transform.position;
-
-            //Setting the Start object to look at the end will be used for making the wind be perpendicular to the cable later.
-            //transform.forward = vectorFromStartToEnd.normalized;
-        }
-
-			
-		
-
+			//Setting the Start object to look at the end will be used for making the wind be perpendicular to the cable later.
+		    transform.forward = vectorFromStartToEnd.normalized;
+		}
 			
 
 		//what point is being calculated

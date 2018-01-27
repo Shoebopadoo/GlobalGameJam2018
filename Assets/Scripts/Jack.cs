@@ -4,7 +4,8 @@ using UnityEngine;
 using VRTK;
 
 enum JackState { EMPTY, FULL, TARGET}
-public class Jack : MonoBehaviour {
+public class Jack : MonoBehaviour
+{
 
     public int Id;
     private bool _targeted = false;
@@ -16,7 +17,7 @@ public class Jack : MonoBehaviour {
 
     #region Access Variables
     public bool IsFree { get { return _plug == null; } }
-    public bool IsTargeted {  get { return _targeted; } }
+    public bool IsTargeted { get { return _targeted; } }
     public bool GetPlug { get { return _plug; } }
     public Switchboard Board { get { return _board; } }
     #endregion
@@ -24,7 +25,8 @@ public class Jack : MonoBehaviour {
 
     #region Unity Callbacks
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         // Set jack name
         gameObject.name = "Jack_" + Id;
         _board.RegisterJack(this);
@@ -33,13 +35,14 @@ public class Jack : MonoBehaviour {
         _snapDropZone = GetComponentInChildren<VRTK_SnapDropZone>();
         _snapDropZone.ObjectSnappedToDropZone += new SnapDropZoneEventHandler(OnSnap);
         _snapDropZone.ObjectUnsnappedFromDropZone += new SnapDropZoneEventHandler(OnUnsnap);
-        
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     #endregion
 
 
@@ -71,18 +74,20 @@ public class Jack : MonoBehaviour {
 
     public void Target()
     {
-        if(!_targeted)
+        if (!_targeted)
         {
             _targeted = true;
             _board.TargetJack(this);
+            Highlight();
         }
     }
     public void Untarget()
     {
-        if(_targeted)
+        if (_targeted)
         {
             _targeted = false;
             _board.UntargetJack(this);
+            UnHighlight();
         }
     }
 
@@ -90,13 +95,13 @@ public class Jack : MonoBehaviour {
     public void OnSnap(object sender, SnapDropZoneEventArgs e)
     {
         Plug snappedPlug = e.snappedObject.GetComponent<Plug>();
-        if(!snappedPlug)
+        if (!snappedPlug)
         {
             Debug.LogError("Snapped obj not a plug");
             return;
         }
         // Try to plug it in
-        if(!PlugIn(snappedPlug))
+        if (!PlugIn(snappedPlug))
         {
             Debug.LogError("Unable to snap plug in");
             _snapDropZone.ForceUnsnap();
@@ -114,6 +119,17 @@ public class Jack : MonoBehaviour {
         Unplug();
     }
     #endregion
-    
+
+
+    #region Private Methods
+    private void Highlight()
+    {
+        
+    }
+    private void UnHighlight()
+    {
+
+    }
+    #endregion
 
 }

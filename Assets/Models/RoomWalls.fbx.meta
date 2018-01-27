@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 6357752db705b604ea4633e18da77581
-timeCreated: 1517031853
+guid: b40d899717b7f2b47bfb9a1ea38e55c5
+timeCreated: 1517092714
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: SM_Books_02
-    100004: UCX_SM_Books_02
     400000: //RootNode
-    400002: SM_Books_02
-    400004: UCX_SM_Books_02
-    2300000: SM_Books_02
-    2300002: UCX_SM_Books_02
-    3300000: SM_Books_02
-    3300002: UCX_SM_Books_02
-    4300000: SM_Books_02
-    4300002: UCX_SM_Books_02
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: RoomWalls
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_SimpleHouseInteriors
-    second: {fileID: 2100000, guid: 2f3b22a83bef0c64cb44740cd0c5c0e2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 62549aa3242f4414daf79688ecd78a71, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: c3c2ff755be20684f86d4ca32736d36e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
