@@ -13,6 +13,7 @@ public class WaitForCall : PhoneState
         // Clear the line targets
         line.Incoming.ClearTarget();
         line.Outgoing.ClearTarget();
+        line.LineOperator.FreePhoneLine(line); // Free the line for it's operator
     }
 
     public override void OnExit(PhoneLine line)

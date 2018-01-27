@@ -7,25 +7,31 @@ public class PhoneLine : MonoBehaviour {
     [SerializeField]
     private int _lineNum;
     [SerializeField]
-    private Switchboard _board;
+    private Switchboard _board; // Switchboard
     [SerializeField]
-    private Plug _outgoing;
+    private Operator _operator; // Operator
     [SerializeField]
-    private Plug _incoming;
+    private Plug _outgoing;     // Outgoing plug
+    [SerializeField]
+    private Plug _incoming;     // Incoming plug
     [SerializeField]
     private float _callLength = 10f;  // 10 second calls to start with
-    
+
     [HideInInspector]
     public float startTime;
     [HideInInspector]
     public float endTime;
 
     private PhoneState _state;
+    private PhoneCall _currCall;
+
     #region Access Variables
     public Plug Outgoing { get { return _outgoing; } }
     public Plug Incoming { get { return _incoming; } }
     public bool Connected { get { return _incoming.IsTargetPlugged && _outgoing.IsTargetPlugged; } }
     public float CallLength { get { return _callLength; } }
+    public Type State { get { return _state.GetType(); } }
+    public Operator LineOperator { get { return _operator; } }
     #endregion
 
 
@@ -33,6 +39,7 @@ public class PhoneLine : MonoBehaviour {
     // Use this for initialization
     void Start () {
         ChangeState<WaitForCall>();
+        _operator.RegisterPhoneLine(this);
 	}
 	
 	// Update is called once per frame
@@ -42,14 +49,16 @@ public class PhoneLine : MonoBehaviour {
     #endregion
 
     // Get an incoming call
-    public void ReceiveCall()
+    public void ReceiveCall(PhoneCall call)
     {
         // Check you are waiting for calls
         if(_state.GetType() == typeof(WaitForCall))
         {
             Jack inJack = _board.FindFreeJack();
             Debug.Log("Incoming call on jack " + inJack.Id);
+            _currCall = call;
             _incoming.Target(inJack);
+            _operator.FillPhoneLine(this);
         }
         
     }
