@@ -167,6 +167,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.023255816
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 90d43cbdba69b734f9d68d4ab2762e78, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a9bf3399a341c243b1f49d680ad6a08, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90d43cbdba69b734f9d68d4ab2762e78, type: 3}
   m_IsPrefabParent: 0
@@ -240,7 +244,7 @@ Prefab:
     - target: {fileID: 2300000, guid: c98ca0e083e864e49928b88d3c6006a0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8f80945c65ed142499580f6ac7fd344c, type: 2}
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c98ca0e083e864e49928b88d3c6006a0, type: 3}
   m_IsPrefabParent: 0
@@ -543,6 +547,10 @@ Prefab:
       propertyPath: m_Name
       value: Desk2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a2519621d2dfaf4ead8cb8ae89dbee5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
   m_IsPrefabParent: 0
@@ -595,7 +603,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -678,6 +686,10 @@ Prefab:
       propertyPath: m_Name
       value: WaterCooler
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b62da052880380b46abe161f91e76417, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b62da052880380b46abe161f91e76417, type: 3}
   m_IsPrefabParent: 0
@@ -764,6 +776,10 @@ Prefab:
       propertyPath: m_Name
       value: Desk3
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a2519621d2dfaf4ead8cb8ae89dbee5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
   m_IsPrefabParent: 0
@@ -803,7 +819,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -980,7 +996,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1079,6 +1095,10 @@ Prefab:
       propertyPath: m_Name
       value: Vents
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d75aa9d8373b23943be5dda3b48556b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85ab924b4b0bbc540b64d8393a588d81, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d75aa9d8373b23943be5dda3b48556b4, type: 3}
   m_IsPrefabParent: 0
@@ -1161,6 +1181,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0839ff0fbdcad164db7aa85236817c1f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0839ff0fbdcad164db7aa85236817c1f, type: 3}
   m_IsPrefabParent: 0
@@ -1213,7 +1237,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1304,6 +1328,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.86487
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 1d2f2dfad0d0a7746aaa9ba77302058b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d2f2dfad0d0a7746aaa9ba77302058b, type: 3}
   m_IsPrefabParent: 0
@@ -1311,6 +1339,92 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 1d2f2dfad0d0a7746aaa9ba77302058b, type: 3}
   m_PrefabInternal: {fileID: 419241530}
+--- !u!1 &436406464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 436406468}
+  - component: {fileID: 436406467}
+  - component: {fileID: 436406466}
+  - component: {fileID: 436406465}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &436406465
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436406464}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &436406466
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436406464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &436406467
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436406464}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &436406468
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436406464}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.02, y: 3.88, z: 0.04}
+  m_LocalScale: {x: 0.97401875, y: 1, z: 0.668162}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1001 &492779287
 Prefab:
   m_ObjectHideFlags: 0
@@ -1459,6 +1573,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 10.135
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
   m_IsPrefabParent: 0
@@ -1513,6 +1631,10 @@ Prefab:
       propertyPath: m_Name
       value: Chair2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
   m_IsPrefabParent: 0
@@ -1685,6 +1807,10 @@ Prefab:
       propertyPath: m_Name
       value: Photograph
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 08287852eb4f7054dbe4c890f51ddfe6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f99b946076c10bb47ba36ba487a0b92d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08287852eb4f7054dbe4c890f51ddfe6, type: 3}
   m_IsPrefabParent: 0
@@ -1759,6 +1885,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0839ff0fbdcad164db7aa85236817c1f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0839ff0fbdcad164db7aa85236817c1f, type: 3}
   m_IsPrefabParent: 0
@@ -1811,7 +1941,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1886,6 +2016,10 @@ Prefab:
       propertyPath: m_Name
       value: Drawer4
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a7a8ba192986e499a2dcab5216f645, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
   m_IsPrefabParent: 0
@@ -2058,6 +2192,10 @@ Prefab:
       propertyPath: m_Name
       value: Radiator
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 12cc02c026691a741ba3c1a5f443a3ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 586471116d58b8549aae8b2fc0c21558, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12cc02c026691a741ba3c1a5f443a3ea, type: 3}
   m_IsPrefabParent: 0
@@ -2159,6 +2297,10 @@ Prefab:
       propertyPath: m_Name
       value: Light1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2f853b8900e9a7041be7a8d5c82baf88, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f853b8900e9a7041be7a8d5c82baf88, type: 3}
   m_IsPrefabParent: 0
@@ -2209,6 +2351,10 @@ Prefab:
       propertyPath: m_Name
       value: Desk1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a2519621d2dfaf4ead8cb8ae89dbee5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
   m_IsPrefabParent: 0
@@ -2475,7 +2621,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2550,6 +2696,10 @@ Prefab:
       propertyPath: m_Name
       value: Drawer2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a7a8ba192986e499a2dcab5216f645, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
   m_IsPrefabParent: 0
@@ -2634,7 +2784,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2709,6 +2859,10 @@ Prefab:
       propertyPath: m_Name
       value: Light2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2f853b8900e9a7041be7a8d5c82baf88, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f853b8900e9a7041be7a8d5c82baf88, type: 3}
   m_IsPrefabParent: 0
@@ -2744,7 +2898,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2883,7 +3037,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ee63ee2c385819649a2322ab0b506ed1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.565
+      value: -3.505
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ee63ee2c385819649a2322ab0b506ed1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2913,6 +3067,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ee63ee2c385819649a2322ab0b506ed1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 51a7bddd0b379624ba5234dca585a6c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee63ee2c385819649a2322ab0b506ed1, type: 3}
   m_IsPrefabParent: 0
@@ -2967,6 +3125,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0031116
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b40d899717b7f2b47bfb9a1ea38e55c5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b40d899717b7f2b47bfb9a1ea38e55c5, type: 3}
   m_IsPrefabParent: 0
@@ -3025,6 +3187,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -41.052002
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
   m_IsPrefabParent: 0
@@ -3141,6 +3307,10 @@ Prefab:
       propertyPath: m_Name
       value: Drawer3
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a7a8ba192986e499a2dcab5216f645, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
   m_IsPrefabParent: 0
@@ -3195,6 +3365,10 @@ Prefab:
       propertyPath: m_Name
       value: Chair1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f49aa6cd5b150da40b6df3187562919e, type: 3}
   m_IsPrefabParent: 0
@@ -3247,7 +3421,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3320,7 +3494,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3393,7 +3567,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3480,6 +3654,10 @@ Prefab:
       propertyPath: m_Name
       value: Papers1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f0f2584bf17a67d41b81db28c09397d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62c9a761f4427fe48bdf5fdc9ea5e396, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0f2584bf17a67d41b81db28c09397d4, type: 3}
   m_IsPrefabParent: 0
@@ -3546,6 +3724,10 @@ Prefab:
       propertyPath: m_Name
       value: Lightswitch
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 4790c945f4d82b44c982924942d9bbec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62c9a761f4427fe48bdf5fdc9ea5e396, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4790c945f4d82b44c982924942d9bbec, type: 3}
   m_IsPrefabParent: 0
@@ -3581,7 +3763,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3890,6 +4072,10 @@ Prefab:
       propertyPath: m_Name
       value: Desk4
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a2519621d2dfaf4ead8cb8ae89dbee5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dea6b9bd2838c7543a76f5f45b1ab045, type: 3}
   m_IsPrefabParent: 0
@@ -3972,7 +4158,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4097,7 +4283,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4228,6 +4414,10 @@ Prefab:
       propertyPath: m_Name
       value: Drawer1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a7a8ba192986e499a2dcab5216f645, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
   m_IsPrefabParent: 0
@@ -4302,6 +4492,10 @@ Prefab:
       propertyPath: m_Name
       value: Bookshelf
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2aabf4f5964df314396a28cf0a817835, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 737b012a4bc916642a26825763ba0ba0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2aabf4f5964df314396a28cf0a817835, type: 3}
   m_IsPrefabParent: 0
@@ -4354,7 +4548,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4427,7 +4621,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4500,7 +4694,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  - {fileID: 2100000, guid: 2f1014347e808ac4a9e1824271730b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4591,6 +4785,10 @@ Prefab:
       propertyPath: m_Name
       value: Papers
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 938902b871818534e8724c3e00f709d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62c9a761f4427fe48bdf5fdc9ea5e396, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938902b871818534e8724c3e00f709d9, type: 3}
   m_IsPrefabParent: 0
@@ -4711,6 +4909,10 @@ Prefab:
       propertyPath: m_Name
       value: Drawer5
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a7a8ba192986e499a2dcab5216f645, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1870554e63c7726428dc4317b249eab6, type: 3}
   m_IsPrefabParent: 0
@@ -4796,6 +4998,10 @@ Prefab:
       propertyPath: m_Name
       value: Cooler_Tank
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 259671946f374564e9a761e1722f4ec1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 385c5a2971a6eef4ea37d4e381ebb0ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 259671946f374564e9a761e1722f4ec1, type: 3}
   m_IsPrefabParent: 0
