@@ -22,10 +22,6 @@ public class ZipperThang : MonoBehaviour {
 
             transform.position = Vector3.Lerp(gameObject.transform.position, goal, speed / 100);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), speed / 100);
-
-            transform.position = Vector3.Lerp(gameObject.transform.position, startPos.position, speed / 100);
-            //transform.eulerAngles = Vector3.Lerp(gameObject.transform.rotation.eulerAngles, startPos.rotation.eulerAngles, speed / 100);
-
         }
 	}
 }
