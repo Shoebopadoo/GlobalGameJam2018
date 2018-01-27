@@ -6,7 +6,11 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class Cable_Procedural_Simple : MonoBehaviour {
 
+    //******IANS CHANGES***********
+    public GameObject plug;
+    //***END CHANGES
 
+    
 	LineRenderer line;
 
 	//the Start of the cable will be the transform of the Gameobject that has this component.
@@ -43,6 +47,8 @@ public class Cable_Procedural_Simple : MonoBehaviour {
 
 		//Start animation at random times
 		swayValue = Random.Range(0, 3.14f);
+
+        plug = gameObject.transform.parent.gameObject;
 	}
 	
 
@@ -63,7 +69,7 @@ public class Cable_Procedural_Simple : MonoBehaviour {
 			//Get direction Vector.
 			vectorFromStartToEnd = endPointTransform.position - transform.position;
 			//Setting the Start object to look at the end will be used for making the wind be perpendicular to the cable later.
-			transform.forward = vectorFromStartToEnd.normalized;
+		    transform.forward = vectorFromStartToEnd.normalized;
 		}
 			
 
