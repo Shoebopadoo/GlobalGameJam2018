@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class PlugManager : MonoBehaviour {
 
-    List<JackBox> _jackBoxes;
+    public Switchboard Board;
 
-	// Use this for initialization
-	void Start () {
-        _jackBoxes = new List<JackBox>();
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
