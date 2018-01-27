@@ -11,37 +11,51 @@ public class Operator : MonoBehaviour {
     // Private fields
     private float _lastCallTime;
     [SerializeField]
-    private float _minDelay = 3f;
+    private float _minDelay = 9f;
     [SerializeField]
     private float _maxDelay = 10f;
     private float _delay;
 
+    #region Unity Callbacks
+    private void Awake()
+    {
+        _lines = new List<PhoneLine>();
+        _freeLines = new List<PhoneLine>();
+    }
     private void Start()
     {
-        foreach(PhoneLine line in _lines)
-        {
-            _freeLines.Add(line);
-        }
-        // Randomize the delay between calls
-        _delay = Random.Range(_minDelay, _maxDelay);
+        ClipManager.LoadClips();
+        RandomizeDelay();
         _lastCallTime = Time.time - _delay;
     }
-
     private void Update()
     {
-        if(IsCallReady())
+        if (IsCallReady())
         {
             PhoneCall call = RandomCall();
             AssignCall(call);
         }
     }
+    #endregion
 
-    // Checks if call is ready
+
+    #region Private Methods
     private bool IsCallReady()
     {
         return Time.time >= _lastCallTime + _delay;
     }
-    
+    private void RandomizeDelay()
+    {
+        _delay = Random.Range(_minDelay, _maxDelay);
+    }
+    private PhoneCall RandomCall()
+    {
+        return PhoneCall.RandomCall();
+    }
+    #endregion
+
+
+    #region Public Methods
     public void AssignCall(PhoneCall call)
     {
         int freeCount = _freeLines.Count;
@@ -54,13 +68,13 @@ public class Operator : MonoBehaviour {
         // Choose a random free line
         int idx = Random.Range(0, freeCount);
         PhoneLine chosenLine = _freeLines[idx];
-
         chosenLine.ReceiveCall(call);
+
+        // Randomize the delay and reset the calltime
+        RandomizeDelay();
+        _lastCallTime = Time.time;
     }
-    private PhoneCall RandomCall()
-    {
-        return PhoneCall.RandomCall();
-    }
+    
     public void RegisterPhoneLine(PhoneLine line)
     {
         // Add to master list
@@ -71,7 +85,7 @@ public class Operator : MonoBehaviour {
         // Add to free lines
         if(!_freeLines.Contains(line))
         {
-            _lines.Add(line);
+            _freeLines.Add(line);
         }
     }
     public void FreePhoneLine(PhoneLine line)
@@ -90,5 +104,5 @@ public class Operator : MonoBehaviour {
         if (!_freeLines.Remove(line))
             Debug.LogWarning(line + " not listed as free");
     }
-    
+    #endregion
 }

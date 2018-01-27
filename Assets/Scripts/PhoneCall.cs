@@ -21,16 +21,21 @@ public static class ClipManager
 {
     public static Dictionary<string,AudioClip> AllClips;
 
-    private static string _clipPath;
+    private static string _clipPath = "Audio/Calls";
 
     /// <summary>
-    /// Get all the audioclips from their source
+    /// Load all the audioclips from their source
     /// </summary>
-    public static void GetClips()
+    public static void LoadClips()
     {
-        AllClips.Clear();
-
-        // Get clips from _clipPath
+        AllClips = new Dictionary<string, AudioClip>();
+        AudioClip[] tClips = Resources.LoadAll<AudioClip>(_clipPath);
+        
+        foreach(AudioClip clip in tClips)
+        {
+            Debug.Log(clip.name + " Loaded successfully");
+            AllClips.Add(clip.name, clip);
+        }
     }
 
     /// <summary>
