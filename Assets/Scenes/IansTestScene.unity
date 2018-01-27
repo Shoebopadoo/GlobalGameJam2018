@@ -3597,9 +3597,9 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: -0.3152, y: 1.32655, z: 0.65749997}
-  - {x: -0.3901632, y: 1.2590388, z: 0.6807018}
-  - {x: -0.42147762, y: 1.2290921, z: 0.69003403}
-  - {x: -0.3910632, y: 1.2522697, z: 0.6797518}
+  - {x: -0.36855164, y: 1.2552083, z: 0.6875224}
+  - {x: -0.39091426, y: 1.2236749, z: 0.69967985}
+  - {x: -0.36945164, y: 1.2484392, z: 0.68657243}
   - {x: -0.31699997, y: 1.3130118, z: 0.6556}
   m_Parameters:
     serializedVersion: 2
@@ -7126,7 +7126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ea8ed65ba79471b49b0c6ed80ef52a5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.348
+      value: 1.3423
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ea8ed65ba79471b49b0c6ed80ef52a5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7168,7 +7168,8 @@ Prefab:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: ea8ed65ba79471b49b0c6ed80ef52a5c, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: ea8ed65ba79471b49b0c6ed80ef52a5c, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &1304235029
@@ -9427,7 +9428,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 139
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 224000012484682510, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -10672,6 +10673,8 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   speed: 1
+  Grabbed: 0
+  snapValue: 1
 --- !u!1001 &1946024496
 Prefab:
   m_ObjectHideFlags: 0
@@ -11655,6 +11658,8 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   speed: 1
+  Grabbed: 1
+  snapValue: 0.025
 --- !u!1 &2140417906
 GameObject:
   m_ObjectHideFlags: 0
