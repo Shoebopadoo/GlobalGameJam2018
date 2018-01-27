@@ -139,13 +139,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778343234}
-  m_LocalRotation: {x: 0.5922956, y: 0.21350951, z: -0.1666517, w: 0.7588326}
-  m_LocalPosition: {x: -1.21, y: 9.27, z: -1.98}
+  m_LocalRotation: {x: 0.4800554, y: -0.1970801, z: 0.11163443, w: 0.8474928}
+  m_LocalPosition: {x: 2.452, y: 9.27, z: -4.987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -42.212, y: 39.827003, z: 64.162}
+  m_LocalEulerAnglesHint: {x: 61.731003, y: 53.146004, z: 183.38599}
 --- !u!23 &778343236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e42f969c52d7c4db0b80b484518e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plug: {fileID: 0}
   endPointTransform: {fileID: 1577366688}
   pointsInLineRenderer: 5
   sagAmplitude: 0.25
@@ -252,11 +253,11 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -1.21, y: 9.27, z: -1.98}
-  - {x: -1.4189048, y: 6.8169, z: -0.97969514}
-  - {x: -1.3282356, y: 4.443232, z: -0.27539098}
-  - {x: -0.8139048, y: 2.1818995, z: 0.010304868}
-  - {x: 0.00000006322726, y: 0.000000016764895, z: -0.000000062473106}
+  - {x: 2.452, y: 9.27, z: -4.987}
+  - {x: 1.6563389, y: 6.709071, z: -3.9539564}
+  - {x: 0.96767825, y: 4.2907395, z: -2.7957263}
+  - {x: 0.4303389, y: 2.074071, z: -1.460456}
+  - {x: 0.000000022583201, y: 0.000000030096235, z: 0.000000026421452}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
