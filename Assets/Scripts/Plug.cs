@@ -36,6 +36,7 @@ public class Plug : MonoBehaviour {
 
     public void Target(Jack target)
     {
+        Debug.Log("Connect to " + target);
         _targetJack = target;
         _targetJack.Target();
     }

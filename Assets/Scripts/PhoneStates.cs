@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using UnityEngine;
 
+// Waiting for a call
 public class WaitForCall : PhoneState
 {
     public override void OnEnter(PhoneLine line)
@@ -14,6 +15,7 @@ public class WaitForCall : PhoneState
         line.Incoming.ClearTarget();
         line.Outgoing.ClearTarget();
         line.LineOperator.FreePhoneLine(line); // Free the line for it's operator
+        line.ClearCall();
     }
 
     public override void OnExit(PhoneLine line)
@@ -31,6 +33,8 @@ public class WaitForCall : PhoneState
         }
     }
 }
+
+// Phone ringing
 public class Ringing : PhoneState
 {
     public override void OnEnter(PhoneLine line)
@@ -55,6 +59,7 @@ public class Ringing : PhoneState
     }
 }
 
+// Waiting for connection
 public class WaitForConnection : PhoneState
 {
     public override void OnEnter(PhoneLine line)
@@ -77,17 +82,20 @@ public class WaitForConnection : PhoneState
     }
 }
 
+// In a phone call
 public class InCall : PhoneState
 {
     public override void OnEnter(PhoneLine line)
     {
         line.startTime = Time.time;
+        line.PlayCall();
         Debug.Log("Entering state: " + this.GetType().ToString());
     }
 
     public override void OnExit(PhoneLine line)
     {
         line.endTime = Time.time;
+        line.ClearCall();
         Debug.Log("Leaving state: " + this.GetType().ToString());
     }
 
