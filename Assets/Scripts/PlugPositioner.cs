@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlugPositioner : MonoBehaviour {
-    public transfrom
+    public Transform startTrans;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
 	
