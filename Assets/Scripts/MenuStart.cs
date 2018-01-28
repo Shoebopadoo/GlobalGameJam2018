@@ -13,6 +13,7 @@ public class MenuStart : MonoBehaviour {
 	void Update () {
         if (OVRInput.Get(OVRInput.RawButton.A))
         {
+            PlayerScore.Reset();
             SceneManager.LoadScene(1);
 
         }
