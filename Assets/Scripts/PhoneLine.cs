@@ -93,6 +93,10 @@ public class PhoneLine : MonoBehaviour {
             Debug.LogError("No call data");
         }
     }
+    public void StopAudio()
+    {
+        _audioSource.Stop();
+    }
     public void ClearLine()
     {
         _currCall = null;

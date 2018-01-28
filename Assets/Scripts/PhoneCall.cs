@@ -18,7 +18,7 @@ public static class ClipManager
 {
     public static Dictionary<string,AudioClip> AllClips;
 
-    private static string _callPath = "Audio/Calls";
+    private static string _callPath = "Audio/Calls/EditedCalls";
 
     /// <summary>
     /// Load all the audioclips from their source
@@ -30,8 +30,8 @@ public static class ClipManager
         
         foreach(AudioClip clip in tClips)
         {
-            //Debug.Log(clip.name + " Loaded successfully");
-            AllClips.Add(clip.name, clip);
+            if(!AllClips.ContainsKey(clip.name))
+                AllClips.Add(clip.name, clip);
         }
     }
 

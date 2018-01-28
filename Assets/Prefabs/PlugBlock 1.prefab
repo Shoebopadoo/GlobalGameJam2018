@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 4511832959405662}
   - component: {fileID: 114250180466679406}
   - component: {fileID: 82380045306981472}
+  - component: {fileID: 114203317484730416}
   m_Layer: 0
   m_Name: PlugBlock 1
   m_TagString: Untagged
@@ -1306,7 +1307,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1514,6 +1515,18 @@ MonoBehaviour:
   m_Text: 'OUTGOING
 
 '
+--- !u!114 &114203317484730416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1345340704879516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3147630adeed86f47ba3c86a85f5ec5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkPeriod: 0.5
 --- !u!114 &114239073559797044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1550,7 +1563,6 @@ MonoBehaviour:
   endTime: 0
   ringTime: 0
   ringLength: 5
-  audioSource: {fileID: 82380045306981472}
   _ringClip: {fileID: 8300000, guid: c6bb8b8b19af8ae4f803884100e0a6c1, type: 3}
   _beepClip: {fileID: 8300000, guid: bb87aa23225abd14da860106ecc5b5fa, type: 3}
 --- !u!114 &114281033448978134
