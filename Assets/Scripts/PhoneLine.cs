@@ -14,18 +14,22 @@ public class PhoneLine : MonoBehaviour {
     private Plug _incoming;     // Incoming plug
     [SerializeField]
     private float _callLength = 10f;  // 10 second calls to start with
+    private PhoneState _state;
+    private PhoneCall _currCall;
 
     [HideInInspector]
     public float startTime;
     [HideInInspector]
     public float endTime;
-
+    [HideInInspector]
     public float ringTime;
     public float ringLength = 5.0f;
 
-    private PhoneState _state;
-    private PhoneCall _currCall;
     private AudioSource _audioSource;
+    [SerializeField]
+    private AudioClip _ringClip;
+    [SerializeField]
+    private AudioClip _beepClip;
     private LightController _lightControl;
 
     #region Access Variables
@@ -35,6 +39,7 @@ public class PhoneLine : MonoBehaviour {
     public bool IsUnplugged { get { return _outgoing.IsFree && Incoming.IsFree; } }
     public float CallLength { get { return _callLength; } }
     public Type State { get { return _state.GetType(); } }
+    
     #endregion
 
 
@@ -69,7 +74,6 @@ public class PhoneLine : MonoBehaviour {
             if(call != null)
             {
                 _currCall = call;
-                _audioSource.clip = _currCall.DialogClip;
                 _incoming.Target(inJack);
                 Operator.FillPhoneLine(this);
             }
@@ -79,7 +83,15 @@ public class PhoneLine : MonoBehaviour {
     // Play the call sound
     public void PlayCall()
     {
-        _audioSource.Play();
+        if(_currCall != null)
+        {
+            _audioSource.clip = _currCall.DialogClip;
+            _audioSource.Play();
+        }
+        else
+        {
+            Debug.LogError("No call data");
+        }
     }
     public void ClearLine()
     {
@@ -105,19 +117,27 @@ public class PhoneLine : MonoBehaviour {
     {
         _lightControl.ChangeState(state);
     }
-
+    public void Beep()
+    {
+        _audioSource.clip = _beepClip;
+        _audioSource.Play();
+    }
     public void Ring()
     {
-        // Start ringing sound & light up
+        // Start ringing sound
+        _audioSource.clip = _ringClip;
+        _audioSource.Play();
         Debug.Log("Ring Ring!");
     }
     public void StopRinging()
     {
-        // Cancel ringing sound & clear light
+        // Cancel ringing sound
+        _audioSource.Stop();
         Debug.Log("Ringing stopped");
     }
     public void CallDropped()
     {
+        Beep();
         Operator.LoseLife();
         PlayerScore.RecordCall(false);
         ChangeState<WaitForCall>();
