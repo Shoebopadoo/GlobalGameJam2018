@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: ea1b774611b470346be5b8368636007e
+timeCreated: 1517120632
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BigCity_MeshPart0
+    100002: BigCity_MeshPart1
+    100004: //RootNode
+    400000: BigCity_MeshPart0
+    400002: BigCity_MeshPart1
+    400004: //RootNode
+    2300000: BigCity_MeshPart0
+    2300002: BigCity_MeshPart1
+    3300000: BigCity_MeshPart0
+    3300002: BigCity_MeshPart1
+    4300000: BigCity_MeshPart0
+    4300002: BigCity_MeshPart1
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Auto_Service2
+    second: {fileID: 2100000, guid: 443b0f0f3ff0c8a4e8220f37594bd5ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Bakery2
+    second: {fileID: 2100000, guid: 4fe7659243257904b950b97182889889, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Bar2
+    second: {fileID: 2100000, guid: caf055352efdb884d9ec0e48f03bfc9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Chicken_Shop2
+    second: {fileID: 2100000, guid: e9b10b33388e41f4aaa1a9cfbb611ad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Clothing2
+    second: {fileID: 2100000, guid: 6739ee20f9660144abb8245f8e9caf7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Coffee_Shop2
+    second: {fileID: 2100000, guid: 765246b1f4e1eae448bb30aecb95331e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Drug_Store2
+    second: {fileID: 2100000, guid: 821879e77e1e0aa46b80c90f6c4c9dfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Factory2
+    second: {fileID: 2100000, guid: 999ad61795f1415498193b87da64359e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Fast_Food2
+    second: {fileID: 2100000, guid: ff28c99fa04588f4db4ff2ce4a645239, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Gift_Shop2
+    second: {fileID: 2100000, guid: ce40dcf6b3e686641bfffa8d8a3029d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_House_03
+    second: {fileID: 2100000, guid: 79ec6c35c1d1eeb46b2de549127c5cda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Pizza2
+    second: {fileID: 2100000, guid: 2e080e84c97a61743948cf9c818307aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Residential
+    second: {fileID: 2100000, guid: 177c93d6c575cf144bb3350f40c87fd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Restaurant2
+    second: {fileID: 2100000, guid: 3afdd3c3a27d7cc479c1af0ec8d7ce1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Shoes_Shop2
+    second: {fileID: 2100000, guid: 74289c44d6357254ca9aec1ac1a385f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Sky_big
+    second: {fileID: 2100000, guid: 86a43d70a76c45d46aa29cff4c615bcf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Sky_small
+    second: {fileID: 2100000, guid: ade7d36d305fbc54cb6a0e35b3d362e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Building_Stadium2
+    second: {fileID: 2100000, guid: b2b958d139989704a9300f2b188a90df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Natures
+    second: {fileID: 2100000, guid: 0f47b5d7f72fd464792200ce58afea80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Props_BillBoard_small2
+    second: {fileID: 2100000, guid: 910d8c58677e4b343b1872bf1e34c6d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Props_Props_01
+    second: {fileID: 2100000, guid: 4ca5602eae4443f49916c35f16dacc2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Props_RoofProps
+    second: {fileID: 2100000, guid: ae17d3fe8b9765148a00bf2766f8ea2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Props_TrafficProps
+    second: {fileID: 2100000, guid: 8e3d0837ce09d604f9aeb4c0d9037603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Road
+    second: {fileID: 2100000, guid: e6bc3787223921c418bc435cd9192a8b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
