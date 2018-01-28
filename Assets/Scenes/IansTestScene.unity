@@ -3764,95 +3764,10 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
---- !u!1 &740214894
-GameObject:
-  m_ObjectHideFlags: 0
-<<<<<<< HEAD
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 740214895}
-  - component: {fileID: 740214898}
-  - component: {fileID: 740214897}
-  - component: {fileID: 740214896}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &740214895
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 740214894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
-  m_Children: []
-  m_Father: {fileID: 800187548}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &740214896
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 740214894}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: b4e3bc67ac9f6ca45ac2f1a15a53139a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!135 &740214897
-SphereCollider:
-=======
 --- !u!1001 &732457456
 Prefab:
->>>>>>> parent of ff3108c... Working on Plug Panel
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &740214898
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 740214894}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-=======
-  serializedVersion: 2
-=======
->>>>>>> parent of ff3108c... Working on Plug Panel
   m_Modification:
     m_TransformParent: {fileID: 964606934}
     m_Modifications:
@@ -3906,20 +3821,12 @@ MeshFilter:
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[1].x
-<<<<<<< HEAD
       value: -0.4692191
-=======
-      value: -0.4678687
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[1].y
-<<<<<<< HEAD
       value: 1.2780067
-=======
-      value: 1.2756773
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
@@ -3929,20 +3836,12 @@ MeshFilter:
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[2].x
-<<<<<<< HEAD
       value: -0.4700262
-=======
-      value: -0.4681164
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[2].y
-<<<<<<< HEAD
       value: 1.2572229
-=======
-      value: 1.2539288
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
@@ -3952,20 +3851,12 @@ MeshFilter:
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[3].x
-<<<<<<< HEAD
       value: -0.46911913
-=======
-      value: -0.46776873
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[3].y
-<<<<<<< HEAD
       value: 1.283158
-=======
-      value: 1.2808286
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
@@ -4016,10 +3907,6 @@ MeshFilter:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3de78e2899c572448b673d523aab3633, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
->>>>>>> 278dbc07493191d1dd82ff386f21b6531a1c0a83
-=======
->>>>>>> parent of ff3108c... Working on Plug Panel
 --- !u!1 &746062447
 GameObject:
   m_ObjectHideFlags: 0
@@ -8943,11 +8830,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of ff3108c... Working on Plug Panel
 --- !u!1001 &1568863918
 Prefab:
   m_ObjectHideFlags: 0
@@ -8990,56 +8872,32 @@ Prefab:
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[1].x
-<<<<<<< HEAD
       value: -0.31887734
-=======
-      value: -0.31595272
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[1].y
-<<<<<<< HEAD
       value: 1.2772039
-=======
-      value: 1.2762445
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[2].x
-<<<<<<< HEAD
       value: -0.31954288
-=======
-      value: -0.31540683
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[2].y
-<<<<<<< HEAD
       value: 1.2560877
-=======
-      value: 1.2547309
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[3].x
-<<<<<<< HEAD
       value: -0.31877738
-=======
-      value: -0.31585276
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
       propertyPath: m_Positions.Array.data[3].y
-<<<<<<< HEAD
       value: 1.2823552
-=======
-      value: 1.2813958
->>>>>>> parent of ff3108c... Working on Plug Panel
       objectReference: {fileID: 0}
     - target: {fileID: 120585518888041868, guid: 3de78e2899c572448b673d523aab3633,
         type: 2}
@@ -9115,10 +8973,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3de78e2899c572448b673d523aab3633, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
->>>>>>> 278dbc07493191d1dd82ff386f21b6531a1c0a83
-=======
->>>>>>> parent of ff3108c... Working on Plug Panel
 --- !u!1 &1578068804
 GameObject:
   m_ObjectHideFlags: 0
