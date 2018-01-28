@@ -19,16 +19,19 @@ public class Switchboard : MonoBehaviour {
 
 
     #region Unity Callbacks
-    private void Start()
+    private void Awake()
     {
         _jacks = new List<Jack>();
         _freeJacks = new Dictionary<int, Jack>();
         _fullJacks = new Dictionary<int, Jack>();
         _targetedJacks = new Dictionary<int, Jack>();
-
+    }
+    private void Start()
+    {
         foreach(Jack j in _jacks)
         {
-            _freeJacks.Add(j.Id, j);
+            if(!_freeJacks.ContainsKey(j.Id))
+                _freeJacks.Add(j.Id, j);
         }
     }
     #endregion
@@ -39,8 +42,6 @@ public class Switchboard : MonoBehaviour {
         // Make sure the jack is on this board
         if(_jacks.Contains(target))
         {
-            // Remove jack from empty list
-            _freeJacks.Remove(target.Id);
             // Dupe check
             if(!_fullJacks.ContainsKey(target.Id))
             {
@@ -88,7 +89,7 @@ public class Switchboard : MonoBehaviour {
     /// <summary>
     /// Return a random available jack
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Jack found or null if no free jack</returns>
     public Jack FindFreeJack()
     {
         if(_freeJacks.Count > 0)
@@ -126,5 +127,25 @@ public class Switchboard : MonoBehaviour {
             FreeJack(target);
         else
             FillJack(target);
+    }
+
+    // Register a jack with the switchboard
+    public void RegisterJack(Jack jack)
+    {
+        // Add to master list
+        if(!_jacks.Contains(jack))
+        {
+            _jacks.Add(jack);
+        }
+
+        // Add to list of free jacks
+        if(!_freeJacks.ContainsKey(jack.Id))
+        {
+            _freeJacks.Add(jack.Id, jack);
+        }
+        else
+        {
+            Debug.LogError("Jack already tagged as free");
+        }
     }
 }

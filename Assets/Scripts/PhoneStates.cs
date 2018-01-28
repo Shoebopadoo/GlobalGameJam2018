@@ -5,19 +5,20 @@ using System.Reflection;
 using System.Text;
 using UnityEngine;
 
+// Waiting for a call
 public class WaitForCall : PhoneState
 {
     public override void OnEnter(PhoneLine line)
     {
         Debug.Log("Entering state: " + this.GetType().ToString());
         // Clear the line targets
-        line.Incoming.ClearTarget();
-        line.Outgoing.ClearTarget();
+        line.ClearLine();
     }
 
     public override void OnExit(PhoneLine line)
     {
         Debug.Log("Leaving state: " + this.GetType().ToString());
+        line.LineOperator.FillPhoneLine(line);
     }
 
     public override void OnUpdate(PhoneLine line)
@@ -30,6 +31,8 @@ public class WaitForCall : PhoneState
         }
     }
 }
+
+// Phone ringing
 public class Ringing : PhoneState
 {
     public override void OnEnter(PhoneLine line)
@@ -54,11 +57,13 @@ public class Ringing : PhoneState
     }
 }
 
+// Waiting for connection
 public class WaitForConnection : PhoneState
 {
     public override void OnEnter(PhoneLine line)
     {
         Debug.Log("Entering state: " + this.GetType().ToString());
+        line.PlayCall();
         line.GetRequest();
     }
 
@@ -69,13 +74,14 @@ public class WaitForConnection : PhoneState
 
     public override void OnUpdate(PhoneLine line)
     {
-        if(line.Connected)
+        if(line.IsConnected)
         {
             line.ChangeState<InCall>();
         }
     }
 }
 
+// In a phone call
 public class InCall : PhoneState
 {
     public override void OnEnter(PhoneLine line)
@@ -87,17 +93,47 @@ public class InCall : PhoneState
     public override void OnExit(PhoneLine line)
     {
         line.endTime = Time.time;
+        line.ClearLine();
         Debug.Log("Leaving state: " + this.GetType().ToString());
     }
 
     public override void OnUpdate(PhoneLine line)
     {
+        if (!line.IsConnected)
+        {
+            Debug.LogWarning("Disconnected too early!");
+            line.ChangeState<CallComplete>();
+        }
+
         if(Time.time > line.startTime + line.CallLength)
+        {
+            line.ChangeState<CallComplete>();
+        }
+    }
+
+}
+
+public class CallComplete : PhoneState
+{
+    public override void OnEnter(PhoneLine line)
+    {
+        Debug.Log("Entering state: " + this.GetType().ToString());
+    }
+
+    public override void OnExit(PhoneLine line)
+    {
+        Debug.Log("Leaving state: " + this.GetType().ToString());
+    }
+
+    public override void OnUpdate(PhoneLine line)
+    {
+        if(line.IsUnplugged)
         {
             line.ChangeState<WaitForCall>();
         }
     }
 }
+
 
 
 public abstract class PhoneState  {

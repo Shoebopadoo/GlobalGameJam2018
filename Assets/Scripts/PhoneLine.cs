@@ -4,28 +4,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PhoneLine : MonoBehaviour {
-
+    [SerializeField]
     private int _lineNum;
-    private Switchboard _board;
-    private Plug _outgoing;
-    private Plug _incoming;
-    private PhoneState _state;
+    [SerializeField]
+    private Switchboard _board; // Switchboard
+    [SerializeField]
+    private Operator _operator; // Operator
+    [SerializeField]
+    private Plug _outgoing;     // Outgoing plug
+    [SerializeField]
+    private Plug _incoming;     // Incoming plug
+    [SerializeField]
     private float _callLength = 10f;  // 10 second calls to start with
 
+    [HideInInspector]
     public float startTime;
+    [HideInInspector]
     public float endTime;
+
+    private PhoneState _state;
+    private PhoneCall _currCall;
+    private AudioSource _audioSource;
 
     #region Access Variables
     public Plug Outgoing { get { return _outgoing; } }
     public Plug Incoming { get { return _incoming; } }
-    public bool Connected { get { return _incoming.IsTargetPlugged && _outgoing.IsTargetPlugged; } }
+    public bool IsConnected { get { return _incoming.IsTargetPlugged && _outgoing.IsTargetPlugged; } }
+    public bool IsUnplugged { get { return _outgoing.IsFree && Incoming.IsFree; } }
     public float CallLength { get { return _callLength; } }
+    public Type State { get { return _state.GetType(); } }
+    public Operator LineOperator { get { return _operator; } }
+
+
     #endregion
 
 
     #region Unity Callbacks
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
     // Use this for initialization
     void Start () {
+        _operator.RegisterPhoneLine(this);
         ChangeState<WaitForCall>();
 	}
 	
@@ -36,16 +57,35 @@ public class PhoneLine : MonoBehaviour {
     #endregion
 
     // Get an incoming call
-    public void ReceiveCall()
+    public void ReceiveCall(PhoneCall call)
     {
         // Check you are waiting for calls
         if(_state.GetType() == typeof(WaitForCall))
         {
             Jack inJack = _board.FindFreeJack();
             Debug.Log("Incoming call on jack " + inJack.Id);
-            _incoming.Target(inJack);
+
+            if(call != null)
+            {
+                _currCall = call;
+                _audioSource.clip = _currCall.DialogClip;
+                _incoming.Target(inJack);
+                _operator.FillPhoneLine(this);
+            }
         }
-        
+    }
+
+    // Play the call sound
+    public void PlayCall()
+    {
+        _audioSource.Play();
+    }
+    public void ClearLine()
+    {
+        _currCall = null;
+        _outgoing.ClearTarget();
+        _incoming.ClearTarget();
+        _operator.FreePhoneLine(this);
     }
 
     // Changes the phone state

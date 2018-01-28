@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 82a2164f153ff9248917adea5d39ae2e
+timeCreated: 1517079287
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Big_Window
+    100004: Room
+    100006: Upper_Windows
+    100008: Window1
+    100010: Window2
+    100012: Window3
+    100014: Window_Bottom
+    100016: Window_Bottom 1
+    100018: Window_Bottom 2
+    100020: Window_Left
+    100022: Window_Left 1
+    100024: Window_Left 2
+    100026: Window_Right
+    100028: Window_Right 1
+    100030: Window_Right 2
+    100032: Window_Top
+    100034: Window_Top 1
+    100036: Window_Top 2
+    100038: Room_Full
+    400000: //RootNode
+    400002: Big_Window
+    400004: Room
+    400006: Upper_Windows
+    400008: Window1
+    400010: Window2
+    400012: Window3
+    400014: Window_Bottom
+    400016: Window_Bottom 1
+    400018: Window_Bottom 2
+    400020: Window_Left
+    400022: Window_Left 1
+    400024: Window_Left 2
+    400026: Window_Right
+    400028: Window_Right 1
+    400030: Window_Right 2
+    400032: Window_Top
+    400034: Window_Top 1
+    400036: Window_Top 2
+    400038: Room_Full
+    2300000: Big_Window
+    2300002: Room
+    2300004: Window_Bottom
+    2300006: Window_Bottom 1
+    2300008: Window_Bottom 2
+    2300010: Window_Left
+    2300012: Window_Left 1
+    2300014: Window_Left 2
+    2300016: Window_Right
+    2300018: Window_Right 1
+    2300020: Window_Right 2
+    2300022: Window_Top
+    2300024: Window_Top 1
+    2300026: Window_Top 2
+    3300000: Big_Window
+    3300002: Room
+    3300004: Window_Bottom
+    3300006: Window_Bottom 1
+    3300008: Window_Bottom 2
+    3300010: Window_Left
+    3300012: Window_Left 1
+    3300014: Window_Left 2
+    3300016: Window_Right
+    3300018: Window_Right 1
+    3300020: Window_Right 2
+    3300022: Window_Top
+    3300024: Window_Top 1
+    3300026: Window_Top 2
+    4300000: Room
+    4300002: Window_Right
+    4300004: Window_Top
+    4300006: Window_Bottom
+    4300008: Window_Left
+    4300010: Window_Right
+    4300012: Window_Top
+    4300014: Window_Bottom
+    4300016: Window_Left
+    4300018: Window_Right
+    4300020: Window_Top
+    4300022: Window_Bottom
+    4300024: Window_Left
+    4300026: Big_Window
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 1225af010ed6c2f4dbd2f62480f59573, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
