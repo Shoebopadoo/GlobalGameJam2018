@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5a479f2ed394bf74aa4df3d7470dc00d
 timeCreated: 1517154473
 licenseType: Pro
+=======
+guid: 5ce232ac06b7385458d42871943e2d7b
+timeCreated: 1517137188
+licenseType: Free
+>>>>>>> 0504161bf078a731386225094b63c9c0ea562e09
 DefaultImporter:
   externalObjects: {}
   userData: 
