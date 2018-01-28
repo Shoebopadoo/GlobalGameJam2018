@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LightFlicker : MonoBehaviour {
-
+    public float blinkSpeed;
     Light _light;
 	// Use this for initialization
 	void Start () {
-        _light = GetComponent<Light>();
+        _light = GetComponentInChildren<Light>();
         StartCoroutine(Flash());
 	}
 	
@@ -19,7 +19,7 @@ public class LightFlicker : MonoBehaviour {
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(blinkSpeed);
             _light.enabled = !_light.enabled;
         }
     }
