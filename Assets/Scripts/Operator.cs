@@ -157,18 +157,3 @@ public static class Operator {
     }
     #endregion
 }
-public class OP_Helper : MonoBehaviour
-{
-    private void Awake()
-    {
-        Operator.Awake();
-    }
-    private void Start()
-    {
-        Operator.Start();
-    }
-    private void Update()
-    {
-        Operator.Update();
-    }
-}

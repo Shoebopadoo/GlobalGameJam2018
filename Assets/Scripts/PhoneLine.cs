@@ -50,6 +50,8 @@ public class PhoneLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Debug.Log(_state);
+
         _state.OnUpdate(this);
 	}
     #endregion
