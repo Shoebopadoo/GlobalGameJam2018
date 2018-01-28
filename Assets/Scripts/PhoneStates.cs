@@ -101,6 +101,7 @@ public class InCall : PhoneState
     public override void OnEnter(PhoneLine line)
     {
         line.startTime = Time.time;
+        line.StopAudio();
         Debug.Log("Entering state: " + this.GetType().ToString());
     }
 

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -19,12 +20,14 @@ public static class Operator {
     // Private fields
     private static float _lastCallTime;
     [SerializeField]
-    private static float _minDelay = 5f;
+    private static float _minDelay = 7f;
     [SerializeField]
     private static float _maxDelay = 10f;
     private static float _delay;
 
     private static OperatorState _state;
+    [SerializeField]
+    private static LifeTracker _lifeTracker;
     #endregion
 
 
@@ -43,6 +46,10 @@ public static class Operator {
     }
     public static void Start()
     {
+        if(_lifeTracker == null)
+        {
+            _lifeTracker = GameObject.FindObjectOfType<LifeTracker>();
+        }
         _lifeCount = 3;
         ClipManager.LoadClips();
         RandomizeDelay();
@@ -100,7 +107,7 @@ public static class Operator {
     }
     private static void GameOver()
     {
-
+        SceneManager.LoadScene("ScoreScreen");
     }
     #endregion
 
@@ -109,6 +116,7 @@ public static class Operator {
     public static void LoseLife()
     {
         _lifeCount--;
+        _lifeTracker.LoseLife();
         if(_lifeCount == 0)
         {
             GameOver();
