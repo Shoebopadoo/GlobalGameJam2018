@@ -7,6 +7,7 @@ public class BlockWallSpawner : MonoBehaviour {
     public int height;
     public int length;
     public GameObject[] walloBlock;
+    public GameObject spawningGrid;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,7 @@ public class BlockWallSpawner : MonoBehaviour {
         {
             for(int q = 0; q < height; q++)
             {
-                walloBlock[l] = Instantiate(Block, new Vector3(Block.transform.localScale.x * i, Block.transform.localScale.y * q, 0), Quaternion.identity);
+                walloBlock[l] = Instantiate(Block, new Vector3(spawningGrid.transform.position.x + Block.transform.localScale.x * i, spawningGrid.transform.position.y + Block.transform.localScale.y * q, spawningGrid.transform.position.z), Quaternion.identity);
                 l++;
             }
         }
