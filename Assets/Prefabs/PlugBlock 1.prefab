@@ -1549,7 +1549,10 @@ MonoBehaviour:
   startTime: 0
   endTime: 0
   ringTime: 0
-  ringLength: 3
+  ringLength: 5
+  audioSource: {fileID: 82380045306981472}
+  _ringClip: {fileID: 8300000, guid: c6bb8b8b19af8ae4f803884100e0a6c1, type: 3}
+  _beepClip: {fileID: 8300000, guid: bb87aa23225abd14da860106ecc5b5fa, type: 3}
 --- !u!114 &114281033448978134
 MonoBehaviour:
   m_ObjectHideFlags: 1

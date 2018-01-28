@@ -14,7 +14,8 @@ public class Jack : MonoBehaviour
     private Plug _plug;
     [SerializeField]
     private Switchboard _board;
-    LightController _lightControl;
+    private LightController _lightControl;
+    private AudioSource _audioSource;
     private VRTK_SnapDropZone _snapDropZone;
 
     #region Access Variables
@@ -42,6 +43,7 @@ public class Jack : MonoBehaviour
         }
         _board.RegisterJack(this);
         _lightControl = GetComponent<LightController>();
+        _audioSource = GetComponent<AudioSource>();
 
         // Subscribe to snapzone events
         _snapDropZone = GetComponentInChildren<VRTK_SnapDropZone>();
@@ -63,6 +65,7 @@ public class Jack : MonoBehaviour
     public bool PlugIn(Plug plug)
     {
         _lightControl.ChangeState(LightState.ON);
+        Click();
         if (IsFree)
         {
             _plug = plug;
@@ -76,6 +79,7 @@ public class Jack : MonoBehaviour
     // Unplug the plug from the jack and return it
     public Plug Unplug()
     {
+        Click();
         // Change the light state
         if (_targeted)
             _lightControl.ChangeState(LightState.FLASH);
@@ -138,6 +142,10 @@ public class Jack : MonoBehaviour
         }
         // Unplug
         Unplug();
+    }
+    public void Click()
+    {
+        _audioSource.Play();
     }
     #endregion
 
