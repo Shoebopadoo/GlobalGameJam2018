@@ -14,6 +14,7 @@ public class LightController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _light = GetComponentInChildren<Light>();
+        ChangeState(LightState.OFF);
 	}
 	
 	// Update is called once per frame
@@ -33,7 +34,6 @@ public class LightController : MonoBehaviour {
         switch(_state)
         {
             case LightState.ON:
-                
                 _light.enabled = true;
                 break;
             case LightState.OFF:

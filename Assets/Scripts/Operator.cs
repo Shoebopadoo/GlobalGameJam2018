@@ -53,6 +53,7 @@ public static class Operator {
     {
         if (IsCallReady())
         {
+            _lastCallTime = Time.time;
             PhoneCall call = RandomCall();
             if(!AssignCall(call))
             {
@@ -102,6 +103,7 @@ public static class Operator {
 
     }
     #endregion
+
 
     #region Public Methods
     public static void LoseLife()
