@@ -7,14 +7,12 @@ public class Switchboard : MonoBehaviour {
     // All jacks on the switchboard
     private List<Jack> _jacks;
     // Jack.Id | Jack
-    private Dictionary<int, Jack> _freeJacks; 
-    private Dictionary<int, Jack> _fullJacks;
+    private Dictionary<int, Jack> _freeJacks;
     private Dictionary<int, Jack> _targetedJacks;
 
     #region Access Variables
     public List<Jack> Jacks { get { return _jacks; } }
     public Dictionary<int, Jack> EmptyJacks { get { return _freeJacks; } }
-    public Dictionary<int, Jack> FullJacks { get { return _fullJacks; } }
     #endregion
 
 
@@ -23,7 +21,6 @@ public class Switchboard : MonoBehaviour {
     {
         _jacks = new List<Jack>();
         _freeJacks = new Dictionary<int, Jack>();
-        _fullJacks = new Dictionary<int, Jack>();
         _targetedJacks = new Dictionary<int, Jack>();
     }
     private void Start()
@@ -36,29 +33,7 @@ public class Switchboard : MonoBehaviour {
     }
     #endregion
 
-    // Tag jack as full
-    public bool FillJack(Jack target)
-    {
-        // Make sure the jack is on this board
-        if(_jacks.Contains(target))
-        {
-            // Dupe check
-            if(!_fullJacks.ContainsKey(target.Id))
-            {
-                _fullJacks.Add(target.Id, target);
-            }
-            else 
-            {
-                Debug.LogWarning("Jack already tagged as full");
-            }
-            return true;
-        }
-        else
-        {
-            Debug.LogError("Jack not found on board.");
-        }
-        return false;
-    }
+    
 
     // Tag jack as free
     public bool FreeJack(Jack target)
@@ -66,8 +41,6 @@ public class Switchboard : MonoBehaviour {
         // Make sure the jack is on this board
         if (_jacks.Contains(target))
         {
-            // Remove from full jacks
-            _fullJacks.Remove(target.Id);
             // Dupe check
             if(!_freeJacks.ContainsKey(target.Id))
             {
@@ -123,15 +96,14 @@ public class Switchboard : MonoBehaviour {
         _targetedJacks.Remove(target.Id);
 
          // Free or fill accordingly
-        if (target.IsFree)
-            FreeJack(target);
-        else
-            FillJack(target);
+        FreeJack(target);
     }
 
     // Register a jack with the switchboard
     public void RegisterJack(Jack jack)
     {
+        jack.Id = _jacks.Count + 1;
+
         // Add to master list
         if(!_jacks.Contains(jack))
         {
