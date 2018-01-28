@@ -103,6 +103,7 @@ public static class Operator {
     }
     #endregion
 
+
     #region Public Methods
     public static void LoseLife()
     {
