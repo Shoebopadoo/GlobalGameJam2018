@@ -1,34 +1,44 @@
 fileFormatVersion: 2
-guid: 27f2091b177cb5b4da1966fa97accb90
-timeCreated: 1517031897
+guid: a24dbe3b4161433469722151ace91519
+timeCreated: 1517131824
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: SM_Painting_02
-    100004: UCX_SM_Painting_02
+    100002: Light_Base
+    100004: Light_Bottom
+    100006: Light_Center
     400000: //RootNode
-    400002: SM_Painting_02
-    400004: UCX_SM_Painting_02
-    2300000: SM_Painting_02
-    2300002: UCX_SM_Painting_02
-    3300000: SM_Painting_02
-    3300002: UCX_SM_Painting_02
-    4300000: SM_Painting_02
-    4300002: UCX_SM_Painting_02
+    400002: Light_Base
+    400004: Light_Bottom
+    400006: Light_Center
+    2300000: Light_Base
+    2300002: Light_Bottom
+    2300004: Light_Center
+    3300000: Light_Base
+    3300002: Light_Bottom
+    3300004: Light_Center
+    4300000: Light_Bottom
+    4300002: Light_Base
+    4300004: Light_Center
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_SimpleOffice
-    second: {fileID: 2100000, guid: 4cc5ceb8437fc6b4f96c78ad64ed9a8f, type: 2}
+      name: Light_Bottom1
+    second: {fileID: 2100000, guid: 5048c739817502b4a8757436069d8d7f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 62549aa3242f4414daf79688ecd78a71, type: 2}
+      name: lambert21
+    second: {fileID: 2100000, guid: cfa352eb4327dca49840a64f3cd28474, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong3
+    second: {fileID: 2100000, guid: dfaa9f7a3689c4544bd5f40be4d487ac, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
