@@ -24,18 +24,26 @@ public static class PlayerScore {
     public static void RecordCall(bool wasSuccess)
     {
         _totalCalls++;
-        if (wasSuccess){
+        if (wasSuccess) {
             _totalConnected++;
             _currentStreak++;
             if (_currentStreak > _bestStreak)
             {
-            _bestStreak = _currentStreak;
+                _bestStreak = _currentStreak;
             }
         }
-        else{
+        else {
             _totalMissed++;
             _currentStreak = 0;
-        }   
+        }
+    }
+    public static void Reset()
+    {
+        _totalCalls = 0;
+        _totalConnected = 0;
+        _totalMissed = 0;
+        _bestStreak = 0;
+        _currentStreak = 0;
     }
 }
 
