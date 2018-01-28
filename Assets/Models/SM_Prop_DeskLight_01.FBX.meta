@@ -13,12 +13,34 @@ ModelImporter:
     400004: UCX_SM_Prop_DeskLight_01
     2300000: SM_Prop_DeskLight_01
     2300002: UCX_SM_Prop_DeskLight_01
+    2300004: //RootNode
     3300000: SM_Prop_DeskLight_01
     3300002: UCX_SM_Prop_DeskLight_01
+    3300004: //RootNode
     4300000: SM_Prop_DeskLight_01
     4300002: UCX_SM_Prop_DeskLight_01
     9500000: //RootNode
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampArm
+    second: {fileID: 2100000, guid: 99b8e9121cd92c5449ae29682e1e8255, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampBase
+    second: {fileID: 2100000, guid: 2045ddaa0a9ecca4ba392f47c64e28d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampShade
+    second: {fileID: 2100000, guid: a13ee1a26f24bce48ad4fc27fec225e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightBulb
+    second: {fileID: 2100000, guid: 8ba519f18665aab43ae79c88610caf41, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

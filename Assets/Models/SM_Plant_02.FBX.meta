@@ -13,8 +13,10 @@ ModelImporter:
     400004: UCX_SM_Plant_01
     2300000: SM_Plant_01
     2300002: UCX_SM_Plant_01
+    2300004: //RootNode
     3300000: SM_Plant_01
     3300002: UCX_SM_Plant_01
+    3300004: //RootNode
     4300000: SM_Plant_01
     4300002: UCX_SM_Plant_01
     9500000: //RootNode
@@ -29,6 +31,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: No Name
     second: {fileID: 2100000, guid: 62549aa3242f4414daf79688ecd78a71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodFrame
+    second: {fileID: 2100000, guid: d6a7b7e5a93590143b93072f166e4208, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert17
+    second: {fileID: 2100000, guid: 74039fca798638548b1130af5aea252f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert18
+    second: {fileID: 2100000, guid: 7016eedb1c1bc484e932dca3a04d8744, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
