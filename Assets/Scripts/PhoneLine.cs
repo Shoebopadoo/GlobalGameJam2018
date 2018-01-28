@@ -29,18 +29,24 @@ public class PhoneLine : MonoBehaviour {
     #region Access Variables
     public Plug Outgoing { get { return _outgoing; } }
     public Plug Incoming { get { return _incoming; } }
-    public bool Connected { get { return _incoming.IsTargetPlugged && _outgoing.IsTargetPlugged; } }
+    public bool IsConnected { get { return _incoming.IsTargetPlugged && _outgoing.IsTargetPlugged; } }
+    public bool IsUnplugged { get { return _outgoing.IsFree && Incoming.IsFree; } }
     public float CallLength { get { return _callLength; } }
     public Type State { get { return _state.GetType(); } }
     public Operator LineOperator { get { return _operator; } }
+
+
     #endregion
 
 
     #region Unity Callbacks
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
     // Use this for initialization
     void Start () {
         ChangeState<WaitForCall>();
-        _audioSource = new AudioSource();
         _operator.RegisterPhoneLine(this);
 	}
 	
@@ -58,24 +64,28 @@ public class PhoneLine : MonoBehaviour {
         {
             Jack inJack = _board.FindFreeJack();
             Debug.Log("Incoming call on jack " + inJack.Id);
-            _currCall = call;
-            _audioSource.clip = _currCall.DialogClip;
-            _incoming.Target(inJack);
-            _operator.FillPhoneLine(this);
+
+            if(call != null)
+            {
+                _currCall = call;
+                _audioSource.clip = _currCall.DialogClip;
+                _incoming.Target(inJack);
+                _operator.FillPhoneLine(this);
+            }
         }
-        
     }
+
     // Play the call sound
     public void PlayCall()
     {
-        if(_currCall != null)
-        {
-            _audioSource.Play();
-        }
+        _audioSource.Play();
     }
-    public void ClearCall()
+    public void ClearLine()
     {
         _currCall = null;
+        _outgoing.ClearTarget();
+        _incoming.ClearTarget();
+        _operator.FreePhoneLine(this);
     }
 
     // Changes the phone state

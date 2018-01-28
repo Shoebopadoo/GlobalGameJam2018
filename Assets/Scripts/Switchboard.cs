@@ -42,8 +42,6 @@ public class Switchboard : MonoBehaviour {
         // Make sure the jack is on this board
         if(_jacks.Contains(target))
         {
-            // Remove jack from empty list
-            _freeJacks.Remove(target.Id);
             // Dupe check
             if(!_fullJacks.ContainsKey(target.Id))
             {
