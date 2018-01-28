@@ -11,6 +11,7 @@ public class WaitForCall : PhoneState
     public override void OnEnter(PhoneLine line)
     {
         Debug.Log("Entering state: " + this.GetType().ToString());
+        line.ChangeLight(LightState.OFF);
         // Clear the line targets
         line.ClearLine();
     }
@@ -38,6 +39,7 @@ public class Ringing : PhoneState
     public override void OnEnter(PhoneLine line)
     {
         Debug.Log("Entering state: " + this.GetType().ToString());
+        line.ChangeLight(LightState.FLASH);
         line.ringTime = Time.time;
         line.Ring();
     }
@@ -70,6 +72,7 @@ public class WaitForConnection : PhoneState
         Debug.Log("Entering state: " + this.GetType().ToString());
         line.PlayCall();
         line.GetRequest();
+        line.ChangeLight(LightState.ON);
         line.startTime = Time.time;
     }
 
@@ -128,7 +131,7 @@ public class CallComplete : PhoneState
     public override void OnEnter(PhoneLine line)
     {
         PlayerScore.RecordCall(true);
-        
+        line.ChangeLight(LightState.OFF);
         Debug.Log("Entering state: " + this.GetType().ToString());
     }
 

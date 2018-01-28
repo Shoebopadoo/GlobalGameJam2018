@@ -26,6 +26,7 @@ public class PhoneLine : MonoBehaviour {
     private PhoneState _state;
     private PhoneCall _currCall;
     private AudioSource _audioSource;
+    private LightController _lightControl;
 
     #region Access Variables
     public Plug Outgoing { get { return _outgoing; } }
@@ -41,6 +42,7 @@ public class PhoneLine : MonoBehaviour {
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        _lightControl = GetComponent<LightController>();
     }
     // Use this for initialization
     void Start () {
@@ -98,6 +100,10 @@ public class PhoneLine : MonoBehaviour {
         // Change the state
         _state = Activator.CreateInstance<T>();
         _state.OnEnter(this);
+    }
+    public void ChangeLight(LightState state)
+    {
+        _lightControl.ChangeState(state);
     }
 
     public void Ring()
