@@ -99,14 +99,14 @@ public class InCall : PhoneState
 
     public override void OnUpdate(PhoneLine line)
     {
-        if(Time.time > line.startTime + line.CallLength)
+        if (!line.IsConnected)
         {
+            Debug.LogWarning("Disconnected too early!");
             line.ChangeState<CallComplete>();
         }
 
-        if(!line.IsConnected)
+        if(Time.time > line.startTime + line.CallLength)
         {
-            Debug.LogWarning("Disconnected too early!");
             line.ChangeState<CallComplete>();
         }
     }

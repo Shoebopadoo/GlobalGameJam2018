@@ -44,7 +44,8 @@ public class Plug : MonoBehaviour {
     }
     public void ClearTarget()
     {
-        _targetJack.Untarget();
+        if(_targetJack != null)
+            _targetJack.Untarget();
         _targetJack = null;
     }
 }

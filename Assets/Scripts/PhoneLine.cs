@@ -46,8 +46,8 @@ public class PhoneLine : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        ChangeState<WaitForCall>();
         _operator.RegisterPhoneLine(this);
+        ChangeState<WaitForCall>();
 	}
 	
 	// Update is called once per frame

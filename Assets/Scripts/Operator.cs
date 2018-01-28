@@ -26,7 +26,7 @@ public class Operator : MonoBehaviour {
     {
         ClipManager.LoadClips();
         RandomizeDelay();
-        _lastCallTime = Time.time - _delay;
+        _lastCallTime = Time.time;
     }
     private void Update()
     {
@@ -74,14 +74,17 @@ public class Operator : MonoBehaviour {
     
     public void RegisterPhoneLine(PhoneLine line)
     {
+        Debug.Log("attempting to register line: " + line);
         // Add to master list
         if(!_lines.Contains(line))
         {
+            Debug.Log("Adding line to master list: " + line);
             _lines.Add(line);
         }
         // Add to free lines
         if(!_freeLines.Contains(line))
         {
+            Debug.Log("Adding line to free list: " + line);
             _freeLines.Add(line);
         }
     }
