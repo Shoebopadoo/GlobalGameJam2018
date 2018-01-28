@@ -61,7 +61,7 @@ public class Operator : MonoBehaviour {
         int freeCount = _freeLines.Count;
         if(freeCount == 0)
         {
-            Debug.LogWarning("No free lines");
+            //Debug.LogWarning("No free lines");
             return;
         }
         

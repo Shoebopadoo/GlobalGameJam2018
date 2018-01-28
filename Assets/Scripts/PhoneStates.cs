@@ -103,7 +103,12 @@ public class InCall : PhoneState
     {
         if(Time.time > line.startTime + line.CallLength)
         {
-            line.ChangeState<WaitForCall>();
+            //line.ChangeState<WaitForCall>();
+        }
+
+        if(line.Outgoing.IsTargetPlugged)
+        {
+            //Debug.Log("Connection secured!");
         }
     }
 }

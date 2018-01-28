@@ -37,10 +37,13 @@ public class PhoneLine : MonoBehaviour {
 
 
     #region Unity Callbacks
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
     // Use this for initialization
     void Start () {
         ChangeState<WaitForCall>();
-        _audioSource = new AudioSource();
         _operator.RegisterPhoneLine(this);
 	}
 	
@@ -58,20 +61,24 @@ public class PhoneLine : MonoBehaviour {
         {
             Jack inJack = _board.FindFreeJack();
             Debug.Log("Incoming call on jack " + inJack.Id);
-            _currCall = call;
-            _audioSource.clip = _currCall.DialogClip;
-            _incoming.Target(inJack);
-            _operator.FillPhoneLine(this);
+
+            if(call != null)
+            {
+                _currCall = call;
+                _audioSource.clip = _currCall.DialogClip;
+                _incoming.Target(inJack);
+                _operator.FillPhoneLine(this);
+            }
+            
         }
         
     }
     // Play the call sound
     public void PlayCall()
     {
-        if(_currCall != null)
-        {
-            _audioSource.Play();
-        }
+        
+        _audioSource.Play();
+        
     }
     public void ClearCall()
     {

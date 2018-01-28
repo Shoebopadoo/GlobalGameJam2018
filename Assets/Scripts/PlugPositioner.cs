@@ -21,6 +21,7 @@ public class PlugPositioner : VRTK_InteractableObject {
     {
         startRot = transform.rotation.eulerAngles;
         startPos = transform.position;
+        startPos.y -= .1f;
 	}
 	
 	// Update is called once per frame
