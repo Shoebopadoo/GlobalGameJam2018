@@ -18,7 +18,7 @@ public class WaitForCall : PhoneState
     public override void OnExit(PhoneLine line)
     {
         Debug.Log("Leaving state: " + this.GetType().ToString());
-        line.LineOperator.FillPhoneLine(line);
+        Operator.FillPhoneLine(line);
     }
 
     public override void OnUpdate(PhoneLine line)
@@ -38,6 +38,7 @@ public class Ringing : PhoneState
     public override void OnEnter(PhoneLine line)
     {
         Debug.Log("Entering state: " + this.GetType().ToString());
+        line.ringTime = Time.time;
         line.Ring();
     }
 
@@ -53,6 +54,10 @@ public class Ringing : PhoneState
         if(line.Incoming.IsTargetPlugged)
         {
             line.ChangeState<WaitForConnection>();
+        }
+        else if(Time.time > line.ringTime + line.ringLength)
+        {
+            line.CallDropped();
         }
     }
 }
@@ -74,10 +79,15 @@ public class WaitForConnection : PhoneState
 
     public override void OnUpdate(PhoneLine line)
     {
-        if(line.IsConnected)
+        if (Time.time >= line.startTime + line.CallLength)
+        {
+            line.CallDropped();
+        }
+        else if (line.IsConnected)
         {
             line.ChangeState<InCall>();
         }
+        
     }
 }
 
@@ -93,7 +103,6 @@ public class InCall : PhoneState
     public override void OnExit(PhoneLine line)
     {
         line.endTime = Time.time;
-        line.ClearLine();
         Debug.Log("Leaving state: " + this.GetType().ToString());
     }
 
@@ -102,7 +111,7 @@ public class InCall : PhoneState
         if (!line.IsConnected)
         {
             Debug.LogWarning("Disconnected too early!");
-            line.ChangeState<CallComplete>();
+            line.CallDropped();
         }
 
         if(Time.time > line.startTime + line.CallLength)
@@ -117,6 +126,7 @@ public class CallComplete : PhoneState
 {
     public override void OnEnter(PhoneLine line)
     {
+        PlayerScore.RecordCall(true);
         Debug.Log("Entering state: " + this.GetType().ToString());
     }
 
@@ -133,8 +143,6 @@ public class CallComplete : PhoneState
         }
     }
 }
-
-
 
 public abstract class PhoneState  {
     

@@ -9,8 +9,6 @@ public class PhoneLine : MonoBehaviour {
     [SerializeField]
     private Switchboard _board; // Switchboard
     [SerializeField]
-    private Operator _operator; // Operator
-    [SerializeField]
     private Plug _outgoing;     // Outgoing plug
     [SerializeField]
     private Plug _incoming;     // Incoming plug
@@ -21,6 +19,9 @@ public class PhoneLine : MonoBehaviour {
     public float startTime;
     [HideInInspector]
     public float endTime;
+
+    public float ringTime;
+    public float ringLength = 3.0f;
 
     private PhoneState _state;
     private PhoneCall _currCall;
@@ -33,9 +34,6 @@ public class PhoneLine : MonoBehaviour {
     public bool IsUnplugged { get { return _outgoing.IsFree && Incoming.IsFree; } }
     public float CallLength { get { return _callLength; } }
     public Type State { get { return _state.GetType(); } }
-    public Operator LineOperator { get { return _operator; } }
-
-
     #endregion
 
 
@@ -46,7 +44,7 @@ public class PhoneLine : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        _operator.RegisterPhoneLine(this);
+        Operator.RegisterPhoneLine(this);
         ChangeState<WaitForCall>();
 	}
 	
@@ -70,7 +68,7 @@ public class PhoneLine : MonoBehaviour {
                 _currCall = call;
                 _audioSource.clip = _currCall.DialogClip;
                 _incoming.Target(inJack);
-                _operator.FillPhoneLine(this);
+                Operator.FillPhoneLine(this);
             }
         }
     }
@@ -85,7 +83,7 @@ public class PhoneLine : MonoBehaviour {
         _currCall = null;
         _outgoing.ClearTarget();
         _incoming.ClearTarget();
-        _operator.FreePhoneLine(this);
+        Operator.FreePhoneLine(this);
     }
 
     // Changes the phone state
@@ -110,6 +108,12 @@ public class PhoneLine : MonoBehaviour {
     {
         // Cancel ringing sound & clear light
         Debug.Log("Ringing stopped");
+    }
+    public void CallDropped()
+    {
+        Operator.LoseLife();
+        PlayerScore.RecordCall(false);
+        ChangeState<WaitForCall>();
     }
 
     // Get a request to connect to a line

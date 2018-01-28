@@ -54,7 +54,6 @@ public class Jack : MonoBehaviour
         {
             _plug = plug;
             _plug.PlugIn(this);
-            _board.FillJack(this);
             Debug.Log("Plugged " + _plug + " into " + gameObject.name);
             return true;
         }

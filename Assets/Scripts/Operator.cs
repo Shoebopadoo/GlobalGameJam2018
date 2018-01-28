@@ -1,78 +1,118 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Operator : MonoBehaviour {
-    
+
+
+public static class Operator {
+
+    #region Private Variables
     // Phone line collections
-    private List<PhoneLine> _lines;
-    private List<PhoneLine> _freeLines;
+    private static List<PhoneLine> _lines;
+    private static List<PhoneLine> _freeLines;
 
+    [SerializeField]
+    private static int _lifeCount = 3;
+    private static int _roundCount = 0;
+    
     // Private fields
-    private float _lastCallTime;
+    private static float _lastCallTime;
     [SerializeField]
-    private float _minDelay = 5f;
+    private static float _minDelay = 5f;
     [SerializeField]
-    private float _maxDelay = 10f;
-    private float _delay;
+    private static float _maxDelay = 10f;
+    private static float _delay;
 
-    #region Unity Callbacks
-    private void Awake()
+    private static OperatorState _state;
+    #endregion
+
+
+    #region Public Variables
+    [SerializeField]
+    public static float RoundLength = 30f;  // Seconds
+    public static float RoundStart;
+    #endregion
+
+
+    #region Init and Update
+    public static void Awake()
     {
         _lines = new List<PhoneLine>();
         _freeLines = new List<PhoneLine>();
     }
-    private void Start()
+    public static void Start()
     {
+        _lifeCount = 3;
         ClipManager.LoadClips();
         RandomizeDelay();
         _lastCallTime = Time.time;
     }
-    private void Update()
+    
+    public static void Update()
     {
         if (IsCallReady())
         {
             PhoneCall call = RandomCall();
-            AssignCall(call);
+            if(!AssignCall(call))
+            {
+                PlayerScore.RecordCall(false);
+                LoseLife();
+            }
         }
     }
     #endregion
 
 
     #region Private Methods
-    private bool IsCallReady()
+    private static bool IsCallReady()
     {
         return Time.time >= _lastCallTime + _delay;
     }
-    private void RandomizeDelay()
+    private static void RandomizeDelay()
     {
-        _delay = Random.Range(_minDelay, _maxDelay);
+        _delay = UnityEngine.Random.Range(_minDelay, _maxDelay);
     }
-    private PhoneCall RandomCall()
+    private static PhoneCall RandomCall()
     {
         return PhoneCall.RandomCall();
     }
-    
-    private void AssignCall(PhoneCall call)
+
+    private static bool AssignCall(PhoneCall call)
     {
         int freeCount = _freeLines.Count;
         if(freeCount == 0)
         {
-            //Debug.LogWarning("No free lines");
-            return;
+            _lastCallTime = Time.time;
+            return false;
         }
         
         // Choose a random free line
-        int idx = Random.Range(0, freeCount);
+        int idx = UnityEngine.Random.Range(0, freeCount);
         PhoneLine chosenLine = _freeLines[idx];
         chosenLine.ReceiveCall(call);
 
         // Randomize the delay and reset the calltime
         RandomizeDelay();
         _lastCallTime = Time.time;
+        return true;
     }
-    
-    public void RegisterPhoneLine(PhoneLine line)
+    private static void GameOver()
+    {
+
+    }
+    #endregion
+
+    #region Public Methods
+    public static void LoseLife()
+    {
+        _lifeCount--;
+        if(_lifeCount == 0)
+        {
+            GameOver();
+        }
+    }
+    public static void RegisterPhoneLine(PhoneLine line)
     {
         Debug.Log("attempting to register line: " + line);
         // Add to master list
@@ -88,7 +128,7 @@ public class Operator : MonoBehaviour {
             _freeLines.Add(line);
         }
     }
-    public void FreePhoneLine(PhoneLine line)
+    public static void FreePhoneLine(PhoneLine line)
     {
         if(!_freeLines.Contains(line))
         {
@@ -99,10 +139,36 @@ public class Operator : MonoBehaviour {
             Debug.LogWarning(line.name + " already free");
         }
     }
-    public void FillPhoneLine(PhoneLine line)
+    public static void FillPhoneLine(PhoneLine line)
     {
         if (!_freeLines.Remove(line))
             Debug.LogWarning(line + " not listed as free");
     }
+    public static void ChangeState<T>() where T : OperatorState
+    {
+        // Leave the current state if it is valid
+        if (_state != null)
+        {
+            _state.OnExit();
+        }
+        // Change the state
+        _state = Activator.CreateInstance<T>();
+        _state.OnEnter();
+    }
     #endregion
+}
+public class OP_Helper : MonoBehaviour
+{
+    private void Awake()
+    {
+        Operator.Awake();
+    }
+    private void Start()
+    {
+        Operator.Start();
+    }
+    private void Update()
+    {
+        Operator.Update();
+    }
 }
