@@ -70,6 +70,7 @@ public class WaitForConnection : PhoneState
         Debug.Log("Entering state: " + this.GetType().ToString());
         line.PlayCall();
         line.GetRequest();
+        line.startTime = Time.time;
     }
 
     public override void OnExit(PhoneLine line)
@@ -127,6 +128,7 @@ public class CallComplete : PhoneState
     public override void OnEnter(PhoneLine line)
     {
         PlayerScore.RecordCall(true);
+        
         Debug.Log("Entering state: " + this.GetType().ToString());
     }
 

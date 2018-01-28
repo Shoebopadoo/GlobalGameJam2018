@@ -21,7 +21,7 @@ public class PhoneLine : MonoBehaviour {
     public float endTime;
 
     public float ringTime;
-    public float ringLength = 3.0f;
+    public float ringLength = 5.0f;
 
     private PhoneState _state;
     private PhoneCall _currCall;
@@ -63,7 +63,6 @@ public class PhoneLine : MonoBehaviour {
         if(_state.GetType() == typeof(WaitForCall))
         {
             Jack inJack = _board.FindFreeJack();
-            Debug.Log("Incoming call on jack " + inJack.Id);
 
             if(call != null)
             {
