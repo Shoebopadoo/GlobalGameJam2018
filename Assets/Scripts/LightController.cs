@@ -12,7 +12,7 @@ public class LightController : MonoBehaviour {
     private float _lastBlink;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         _light = GetComponentInChildren<Light>();
         ChangeState(LightState.OFF);
 	}
