@@ -29,6 +29,15 @@ public class Jack : MonoBehaviour
     {
         // Set jack name
         gameObject.name = "Jack_" + Id;
+        if(!Board)
+        {
+            GameObject goBoard = GameObject.Find("switchboard");
+            Switchboard brd = goBoard.GetComponent<Switchboard>();
+            if(brd)
+            {
+                _board = brd;
+            }
+        }
         _board.RegisterJack(this);
 
         // Subscribe to snapzone events
