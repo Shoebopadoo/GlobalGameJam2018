@@ -5,14 +5,11 @@ using UnityEngine;
 public class PhoneCall {
     
     public AudioClip DialogClip;
-    public float Length; // Seconds
    
     public static PhoneCall RandomCall()
     {
         PhoneCall call = new PhoneCall();
         call.DialogClip = ClipManager.RandomClip();
-        call.Length = call.DialogClip.length;
-        
         return call;
     }
 }
@@ -21,7 +18,7 @@ public static class ClipManager
 {
     public static Dictionary<string,AudioClip> AllClips;
 
-    private static string _clipPath = "Audio/Calls";
+    private static string _callPath = "Audio/Calls";
 
     /// <summary>
     /// Load all the audioclips from their source
@@ -29,11 +26,11 @@ public static class ClipManager
     public static void LoadClips()
     {
         AllClips = new Dictionary<string, AudioClip>();
-        AudioClip[] tClips = Resources.LoadAll<AudioClip>(_clipPath);
+        AudioClip[] tClips = Resources.LoadAll<AudioClip>(_callPath);
         
         foreach(AudioClip clip in tClips)
         {
-            Debug.Log(clip.name + " Loaded successfully");
+            //Debug.Log(clip.name + " Loaded successfully");
             AllClips.Add(clip.name, clip);
         }
     }

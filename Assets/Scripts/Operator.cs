@@ -11,7 +11,7 @@ public class Operator : MonoBehaviour {
     // Private fields
     private float _lastCallTime;
     [SerializeField]
-    private float _minDelay = 9f;
+    private float _minDelay = 5f;
     [SerializeField]
     private float _maxDelay = 10f;
     private float _delay;
@@ -52,11 +52,8 @@ public class Operator : MonoBehaviour {
     {
         return PhoneCall.RandomCall();
     }
-    #endregion
-
-
-    #region Public Methods
-    public void AssignCall(PhoneCall call)
+    
+    private void AssignCall(PhoneCall call)
     {
         int freeCount = _freeLines.Count;
         if(freeCount == 0)

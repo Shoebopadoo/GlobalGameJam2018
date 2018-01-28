@@ -10,17 +10,9 @@ public class Plug : MonoBehaviour {
 
     #region Access Variables
     public bool IsFree { get { return _pluggedJack == null; } }
-    public bool IsTargetPlugged { get
-        {
-            if (_targetJack == null)
-                return false;
-            else if (_pluggedJack == null)
-                return false;
-            else
-                return _targetJack == _pluggedJack;
-
-
-        } }
+    public bool IsTargetPlugged { get {
+            if (_targetJack == null || _pluggedJack == null) return false;
+            else return _targetJack == _pluggedJack; } }
     public Jack PluggedJack { get { return _pluggedJack; } }
     public Jack TargetedJack { get { return _targetJack; } }
     
@@ -46,14 +38,13 @@ public class Plug : MonoBehaviour {
 
     public void Target(Jack target)
     {
-        Debug.Log("Connect to " + target);
+        Debug.Log("Connect to " + target.name);
         _targetJack = target;
         _targetJack.Target();
     }
     public void ClearTarget()
     {
+        _targetJack.Untarget();
         _targetJack = null;
     }
-
-
 }

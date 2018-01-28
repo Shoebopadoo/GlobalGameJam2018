@@ -66,9 +66,12 @@ public class Jack : MonoBehaviour
     {
         Plug tPlug = _plug;
         _plug = null;
-        tPlug.Unplug();
-        _board.FreeJack(this);
-        Debug.Log("Unplugged " + tPlug + " from " + gameObject.name);
+        if(tPlug != null)
+        {
+            tPlug.Unplug();
+            _board.FreeJack(this);
+            Debug.Log("Unplugged " + tPlug + " from " + gameObject.name);
+        }
         return tPlug;
     }
 
@@ -112,7 +115,7 @@ public class Jack : MonoBehaviour
         Plug snappedPlug = e.snappedObject.GetComponent<Plug>();
         if (!snappedPlug)
         {
-            Debug.LogError("Snapped obj not a plug");
+            Debug.LogError("Unsnapped obj not a plug");
             return;
         }
         // Unplug
