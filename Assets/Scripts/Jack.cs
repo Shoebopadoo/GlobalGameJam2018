@@ -7,12 +7,14 @@ enum JackState { EMPTY, FULL, TARGET}
 public class Jack : MonoBehaviour
 {
 
+
     public int Id;
     private bool _targeted = false;
 
     private Plug _plug;
     [SerializeField]
     private Switchboard _board;
+    LightController _lightControl;
     private VRTK_SnapDropZone _snapDropZone;
 
     #region Access Variables
@@ -39,6 +41,7 @@ public class Jack : MonoBehaviour
             }
         }
         _board.RegisterJack(this);
+        _lightControl = GetComponent<LightController>();
 
         // Subscribe to snapzone events
         _snapDropZone = GetComponentInChildren<VRTK_SnapDropZone>();
@@ -59,6 +62,7 @@ public class Jack : MonoBehaviour
     // Fill the jack with a plug
     public bool PlugIn(Plug plug)
     {
+        _lightControl.ChangeState(LightState.ON);
         if (IsFree)
         {
             _plug = plug;
@@ -72,6 +76,12 @@ public class Jack : MonoBehaviour
     // Unplug the plug from the jack and return it
     public Plug Unplug()
     {
+        // Change the light state
+        if (_targeted)
+            _lightControl.ChangeState(LightState.FLASH);
+        else
+            _lightControl.ChangeState(LightState.OFF);
+        
         Plug tPlug = _plug;
         _plug = null;
         if(tPlug != null)
@@ -89,7 +99,7 @@ public class Jack : MonoBehaviour
         {
             _targeted = true;
             _board.TargetJack(this);
-            Highlight();
+            _lightControl.ChangeState(LightState.FLASH);
         }
     }
     public void Untarget()
@@ -98,7 +108,7 @@ public class Jack : MonoBehaviour
         {
             _targeted = false;
             _board.UntargetJack(this);
-            UnHighlight();
+            _lightControl.ChangeState(LightState.OFF);
         }
     }
 
