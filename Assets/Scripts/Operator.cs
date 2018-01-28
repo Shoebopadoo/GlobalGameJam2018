@@ -26,8 +26,8 @@ public static class Operator {
     private static float _delay;
 
     private static OperatorState _state;
-    [SerializeField]
-    private static LifeTracker _lifeTracker;
+    public static LifeTracker lifeTracker;
+    private static string _scoreScreenPath = "ScoreScreen";
     #endregion
 
 
@@ -46,10 +46,6 @@ public static class Operator {
     }
     public static void Start()
     {
-        if(_lifeTracker == null)
-        {
-            _lifeTracker = GameObject.FindObjectOfType<LifeTracker>();
-        }
         _lifeCount = 3;
         ClipManager.LoadClips();
         RandomizeDelay();
@@ -107,7 +103,8 @@ public static class Operator {
     }
     private static void GameOver()
     {
-        SceneManager.LoadScene("ScoreScreen");
+        Debug.LogWarning("GAME OVER!");
+        SceneManager.LoadScene(_scoreScreenPath);
     }
     #endregion
 
@@ -116,7 +113,7 @@ public static class Operator {
     public static void LoseLife()
     {
         _lifeCount--;
-        _lifeTracker.LoseLife();
+        lifeTracker.LoseLife();
         if(_lifeCount == 0)
         {
             GameOver();
