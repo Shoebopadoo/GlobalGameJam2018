@@ -20,9 +20,9 @@ public static class Operator {
     // Private fields
     private static float _lastCallTime;
     [SerializeField]
-    private static float _minDelay = 10f;
+    private static float _minDelay = 7f;
     [SerializeField]
-    private static float _maxDelay = 15f;
+    private static float _maxDelay = 10f;
     private static float _delay;
 
     private static OperatorState _state;
