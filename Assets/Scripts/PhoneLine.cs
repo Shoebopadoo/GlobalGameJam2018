@@ -13,7 +13,7 @@ public class PhoneLine : MonoBehaviour {
     [SerializeField]
     private Plug _incoming;     // Incoming plug
     [SerializeField]
-    private float _callLength = 10f;  // 10 second calls to start with
+    private float _callLength = 5f;  // 10 second calls to start with
     private PhoneState _state;
     private PhoneCall _currCall;
 
@@ -23,7 +23,7 @@ public class PhoneLine : MonoBehaviour {
     public float endTime;
     [HideInInspector]
     public float ringTime;
-    public float ringLength = 5.0f;
+    public float ringLength = 6.0f;
 
     private AudioSource _audioSource;
     [SerializeField]
