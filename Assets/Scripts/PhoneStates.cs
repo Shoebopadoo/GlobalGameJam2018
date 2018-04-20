@@ -113,7 +113,8 @@ public class InCall : PhoneState
 
     public override void OnUpdate(PhoneLine line)
     {
-        if (!line.IsConnected)
+        // *** Removed this lose condition ***
+        if (false)//!line.IsConnected)
         {
             Debug.LogWarning("Disconnected too early!");
             line.CallDropped();
